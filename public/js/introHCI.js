@@ -60,8 +60,18 @@ function randomizeColors(e) {
 
 	console.log(url2);
 
-	function callback(result) {
+	function callback(colorData) {
+		var colorArray = colorData["colors"];
+		var colors = colorArray["hex"];
+
 		console.log("color callback");
+		$('body').css('background-color', colors[0]);
+		$('.thumbnail').css('background-color', colors[1]);
+		$('h1, h2, h3, h4, h5, h5').css('color', colors[2]);
+		$('p').css('color', colors[3]);
+		$('.project img'
+
+			).css('opacity', .75);
 	}
 
 
